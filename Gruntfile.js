@@ -346,6 +346,16 @@ module.exports = function (grunt) {
                 'imagemin',
                 'svgmin'
             ]
+        },
+
+        wiredep: {
+            target: {
+                src: [
+                    'app/*.html',
+                    'app/styles/*.scss',
+                    'app/scripts/*.js'
+                ]
+            }
         }
     });
 
@@ -403,4 +413,6 @@ module.exports = function (grunt) {
         'test',
         'build'
     ]);
+
+    grunt.loadNpmTasks('grunt-wiredep');
 };
